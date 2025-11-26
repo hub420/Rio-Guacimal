@@ -488,3 +488,55 @@ footer p {
         padding: 50px 0;
     }
 }
+
+/* ===== MENÚ HAMBURGUESA - ANIMACIÓN ===== */
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Animación del menú móvil */
+.nav-menu {
+    transition: left 0.3s ease-in-out;
+}
+
+/* Overlay cuando el menú está abierto (opcional) */
+.nav-menu.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Mejorar la visibilidad en móvil */
+@media (max-width: 768px) {
+    .nav-menu {
+        z-index: 999;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        font-size: 1.2rem;
+    }
+}
