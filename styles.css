@@ -88,7 +88,7 @@ header {
 /* Hero Section BackGround*/
 .hero {
     background-image: linear-gradient(rgba(44, 122, 123, 0.7), rgba(44, 122, 123, 0.7)),
-                      url('');
+                      url('media/riovista.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -538,5 +538,39 @@ footer p {
     .nav-menu a {
         display: block;
         font-size: 1.2rem;
+    }
+
+    .imagen-chica {
+        width: 200px;
+        height: auto;
+    }
+
+    .seccion-descargas {
+    padding: 50px 20px;
+    text-align: center;
+    }
+
+    .lista-botones {
+        display: flex;
+        flex-direction: column; /* Uno debajo del otro */
+        align-items: center;
+        gap: 15px; /* Espacio entre botones */
+        margin-top: 20px;
+    }
+
+    .btn-link {
+        background-color: #2c7a7b;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 50px; /* Bordes redondeados */
+        font-weight: bold;
+        transition: background 0.3s;
+        width: 100%;
+        max-width: 400px; /* Ancho máximo del botón */
+    }
+
+    .btn-link:hover {
+        background-color: #1a4f50; /* Un verde más oscuro al pasar el mouse */
     }
 }
