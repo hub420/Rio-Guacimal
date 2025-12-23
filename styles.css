@@ -71,6 +71,16 @@ header {
     color: var(--secondary-color);
 }
 
+.nav-logo {
+    height: 50px; /* Hacemos que la imagen se ajuste a la altura de la barra */
+    width: auto;  /* El ancho se ajustará automáticamente */
+    object-fit: cover;
+    
+    /* TRUCO: Si la imagen es muy alta y quieres que se vea bien sin deformarse: */
+    /* Esto recortará la imagen para que sea cuadrada o rectangular si fuerzas el ancho */
+    /* object-fit: cover; */ 
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
