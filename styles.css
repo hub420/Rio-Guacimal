@@ -584,3 +584,32 @@ footer p {
         background-color: #1a4f50; /* Un verde más oscuro al pasar el mouse */
     }
 }
+
+/* ===== efectos para las portadas del periodico agua pura  ===== */
+/* Contenedor de las imágenes */
+/* Contenedor de las imágenes */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre imágenes */
+    flex-wrap: wrap; /* Baja las imágenes en pantallas muy chicas */
+    padding: 15px 0;
+}
+
+/* Estilo de cada imagen */
+.gallery-container img {
+    flex: 1 1 180px; /* Tamaño base flexible */
+    max-width: 250px; /* Ancho máximo para que no se vean gigantes */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el cursor */
+.gallery-container img:hover {
+    transform: translateY(-5px) scale(1.03); /* Se eleva un poco */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
