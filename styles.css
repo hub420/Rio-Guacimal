@@ -588,28 +588,125 @@ footer p {
 /* ===== efectos para las portadas del periodico agua pura  ===== */
 /* Contenedor de las imágenes */
 /* Contenedor de las imágenes */
-.gallery-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre imágenes */
-    flex-wrap: wrap; /* Baja las imágenes en pantallas muy chicas */
-    padding: 15px 0;
+/* ===============================
+   ESTILO EXHIBIDOR 3D
+=============================== */
+/* ===============================
+   EXHIBIDOR 3D
+=============================== */
+.gallery-exhibitor{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    perspective:1000px;
+    padding:30px 10px;
+    flex-wrap:wrap;
+}
+.gallery-exhibitor .revista-img{
+    width:100%;
+    max-width:200px;
+    height:auto;
+    border-radius:4px;
+    box-shadow:-6px 8px 18px rgba(0,0,0,.35);
+    transition:transform .3s ease, box-shadow .3s ease;
+    cursor:zoom-in;
+}
+.gallery-exhibitor .revista-img:hover{
+    transform:rotateY(-10deg) translateY(-8px) scale(1.06);
+    box-shadow:-10px 14px 25px rgba(0,0,0,.45);
 }
 
-/* Estilo de cada imagen */
-.gallery-container img {
-    flex: 1 1 180px; /* Tamaño base flexible */
-    max-width: 250px; /* Ancho máximo para que no se vean gigantes */
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra elegante */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+/* ===============================
+   VISOR (MODAL) CON SCROLL + ZOOM
+=============================== */
+#imageModal{
+    display:none;
+    position:fixed;
+    inset:0;                 /* top/right/bottom/left = 0 */
+    width:100vw;
+    height:100vh;
+    z-index:99999;
+    background:rgba(0,0,0,.92);
+    /* ⚠️ sin backdrop-filter: en algunos navegadores recorta el contenido */
+}
+#imageModal.active{ display:block; }
+
+/* Área desplazable: aquí ocurre el scroll vertical y horizontal */
+.modal-scroll{
+    position:absolute;
+    inset:0;
+    overflow:auto;                      /* ← la clave para recorrer el documento */
+    -webkit-overflow-scrolling:touch;   /* scroll suave en iOS */
+    padding:60px 15px 40px;             /* deja aire bajo la barra de botones */
+    text-align:center;
+    scrollbar-width:thin;
+    scrollbar-color:#888 transparent;
+}
+.modal-scroll::-webkit-scrollbar{ width:10px; height:10px; }
+.modal-scroll::-webkit-scrollbar-thumb{ background:#777; border-radius:6px; }
+.modal-scroll::-webkit-scrollbar-thumb:hover{ background:#aaa; }
+
+/* La imagen: por defecto ancho legible, NO limitada por la altura */
+#imageModal .modal-content{
+    display:block;
+    margin:0 auto;
+    width:auto;
+    max-width:none;      /* anula cualquier max-width heredado de tu CSS */
+    max-height:none;     /* ❌ nada de 90vh: si no, no se puede leer */
+    height:auto;
+    border-radius:4px;
+    box-shadow:0 5px 30px rgba(0,0,0,.6);
+    background:#fff;
+    cursor:grab;
+    user-select:none;
+    -webkit-user-drag:none;
+    transition:width .15s ease;
+}
+#imageModal .modal-content.grabbing{ cursor:grabbing; }
+
+/* Modo "ajustar a pantalla" */
+#imageModal .modal-content.fit{
+    width:auto !important;
+    max-width:95% !important;
+    max-height:calc(100vh - 110px) !important;
+    cursor:zoom-in;
 }
 
-/* Efecto al pasar el cursor */
-.gallery-container img:hover {
-    transform: translateY(-5px) scale(1.03); /* Se eleva un poco */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+/* Barra de herramientas */
+.modal-toolbar{
+    position:absolute;
+    top:0; left:0; right:0;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:8px;
+    padding:0 16px;
+    background:linear-gradient(to bottom, rgba(0,0,0,.75), transparent);
+    z-index:5;
+}
+.tool-btn{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    color:#fff;
+    font-size:20px;
+    line-height:1;
+    width:38px; height:38px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .2s ease, transform .2s ease;
+}
+.tool-btn:hover{ background:rgba(255,255,255,.3); transform:scale(1.1); }
+.close-btn{ font-size:26px; background:rgba(255,71,87,.25); border-color:rgba(255,71,87,.6); }
+.close-btn:hover{ background:#ff4757; }
+.zoom-level{ color:#fff; font-size:13px; min-width:48px; text-align:center; opacity:.85; }
+
+/* Bloquea el scroll del fondo mientras el visor está abierto */
+body.modal-open{ overflow:hidden; }
+
+/* Móvil */
+@media (max-width:600px){
+    .modal-scroll{ padding:56px 0 20px; }
+    #imageModal .modal-content{ width:100%; }
 }

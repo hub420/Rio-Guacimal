@@ -178,10 +178,10 @@
                 <!-- Acción 3: defensa legal -->
                 <!-- CAMBIAR IMAGEN: Reemplazar media/educacion.jpg -->
                 <div class="action-item">
-                    <div class="gallery-container">
-                        <img src="media/AguaPura.jpeg" style="max-width: 75%; height: auto;" alt="Revista Agua Pura">
-                        <img src="media/imgrioguacimalUno.jpeg" style="max-width: 75%; height: auto;" alt="Revista Agua Pura">
-                        <img src="media/imgrioguacimalDos.jpeg" style="max-width: 75%; height: auto;" alt="Revista Agua Pura">
+                    <div class="gallery-exhibitor">
+                        <img src="media/AguaPura.jpeg"  alt="Revista Agua Pura" class="revista-img">
+                        <img src="media/imgrioguacimalUno.jpeg"  alt="Revista Agua Pura Uno" class="revista-img">
+                        <img src="media/imgrioguacimalDos.jpeg"  alt="Revista Agua Pura Dos" class="revista-img">
                     </div>
                     <div class="action-content">
                         <h3>DEFENSA LEGAL</h3>
@@ -204,6 +204,21 @@
 
                         <p></p>
                     </div>
+                  <!-- ↓↓↓ ESTO VA AL FINAL DEL BODY, HIJO DIRECTO DE <body> ↓↓↓ -->
+                <div id="imageModal" class="modal" role="dialog" aria-modal="true">
+
+                    <div class="modal-toolbar">
+                    <button type="button" class="tool-btn" id="zoomOut" title="Alejar">−</button>
+                    <span class="zoom-level" id="zoomLevel">100%</span>
+                    <button type="button" class="tool-btn" id="zoomIn" title="Acercar">+</button>
+                    <button type="button" class="tool-btn" id="fitBtn" title="Ajustar a pantalla">⤢</button>
+                    <button type="button" class="tool-btn close-btn" id="closeBtn" title="Cerrar">&times;</button>
+                </div>
+
+    <div class="modal-scroll" id="modalScroll">
+        <img class="modal-content" id="modalImg" alt="Vista ampliada">
+    </div>
+</div>
                 </div>
 
                 <!-- Acción 4: Monitoreo -->
@@ -309,5 +324,6 @@
 
     <!-- ⚠️ IMPORTANTE: Esta línea debe estar aquí -->
     <script src="script.js"></script>
+
 </body>
 </html>
