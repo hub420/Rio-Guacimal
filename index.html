@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Protección y conservación de la cuenca del río - Proyecto ambiental">
     <title>Protección de Cuenca del Río</title>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -19,12 +25,13 @@
                 <ul class="nav-menu">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#concesiones">Concesiones</a></li>
                     <li><a href="#problematica">Problemática</a></li>
                     <li><a href="#acciones">Acciones</a></li>
                     <li><a href="#participa">Participa</a></li>
                     <li><a href="#noticias">Noticias</a></li>
                     <li><a href="#contacto">Contacto</a></li>
-                    
+
 
                 </ul>
                 <div class="hamburger">
@@ -52,17 +59,20 @@
     <!-- Nosotros Section   -->
     <section id="Bajo la problematica" class="section">
         <div class="container">
-            <h2 class="section-title">Bajo la problematica</h2></div>
+            <h2 class="section-title">Bajo la problematica</h2>
+        </div>
         <!-- CAMBIAR IMAGEN: Reemplazar media/hero-rio.jpg con tu propia imagen -->
         <!--<img src="media/mapa.png" class="imagen-chica" alt="Descripción"> -->
         <img src="media/mapa.png" style="max-width: 100%; height: auto;" alt="descripcion">
         <div class="hero-overlay">
             <div class="sction-content" style="text-align: left; padding: 20px;">
-            <p>Concesiones propuestas para extracción de piedra y arena del Guacimal y ríos vecinos. Cada segmento significa una potencial concesión.  Los segmentos en naranja ya están en operación. </p>
+                <p>Concesiones propuestas para extracción de piedra y arena del Guacimal y ríos vecinos. Cada segmento
+                    significa una potencial concesión. Los segmentos en naranja ya están en operación. </p>
                 <!--<a href="#participa" class="btn-primary">Únete Ahora</a>-->
             </div>
         </div>
-    </div>
+
+        </div>
     </section>
 
     <!-- Nosotros Section -->
@@ -71,8 +81,12 @@
             <h2 class="section-title">Quienes somos</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Bajo las organizaciones sombrilla, Alianza de Comunidades por la Defensa del Agua y la Asociación Comunidades Unidas por un Desarrollo Ecológico y Sustentable, trabajamos con más de 20 organizaciones para cuidar lo que nos sostiene.</p>
-                    <p>Nuestro objetivo es preservar este ecosistema vital para las generaciones presentes y futuras.  En conjunto con comunidades locales, instituciones educativas y organismos gubernamentales para cuidar nuestra fuente de vida.</p>
+                    <p>Bajo las organizaciones sombrilla, Alianza de Comunidades por la Defensa del Agua y la Asociación
+                        Comunidades Unidas por un Desarrollo Ecológico y Sustentable, trabajamos con más de 20
+                        organizaciones para cuidar lo que nos sostiene.</p>
+                    <p>Nuestro objetivo es preservar este ecosistema vital para las generaciones presentes y futuras. En
+                        conjunto con comunidades locales, instituciones educativas y organismos gubernamentales para
+                        cuidar nuestra fuente de vida.</p>
                 </div>
                 <!--<div class="about-stats">
                     <div class="stat-box">
@@ -87,11 +101,67 @@
                         <h3>1,000</h3>
                         <p>Monitoreos realizados</p>
                     </div>-->
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
+    <section id="concesiones" class="section py-5">
+        <div class="container">
+
+            <!-- Encabezado -->
+            <div class="mb-4">
+                <h3 class="section-title">Concesiones</h3>
+                <p>Mapa de concesiones propuestas para extracción de piedra y arena del Guacimal y ríos vecinos. Cada
+                    segmento significa una potencial concesión. Los segmentos en naranja ya están en operación.</p>
+            </div>
+
+            <!-- Carousel dentro del contenedor -->
+            <div id="carouselStacked" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Barra superior con título y flechas -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0">Concesiones</h5>
+                    <div>
+                        <!-- Botones con clases estándar de Bootstrap -->
+                        <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-target="#carouselStacked"
+                            data-bs-slide="prev">
+                            &lt; Anterior
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-target="#carouselStacked"
+                            data-bs-slide="next">
+                            Siguiente &gt;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slides con altura controlada -->
+                <div class="carousel-inner rounded-4 bg-light shadow-sm">
+                    <div class="carousel-item active text-center">
+                        <img src="media\mapa_cdp_homologado_v5_cobertura_800dpi.png"
+                            class="d-block mx-auto img-carousel" alt="Cobertura">
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="media\mapa_cdp_rio_aranjuez_etiquetas_800dpi.png" class="d-block mx-auto img-carousel"
+                            alt="Etiquetas A">
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="media/mapa_cdp_rio_guacimal_etiquetas_800dpi.png" class="d-block mx-auto img-carousel"
+                            alt="Etiquetas G">
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="media\mapa_cdp_rio_lagarto_etiquetas_800dpi.png" class="d-block mx-auto img-carousel"
+                            alt="Etiquetas L">
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="media\mapa_concesiones_CBPC_v9_800dpi.jpg" class="d-block mx-auto img-carousel"
+                            alt="CBPC">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <!-- Problemática Section -->
     <section id="problematica" class="section section-gray">
         <div class="container">
@@ -100,17 +170,24 @@
                 <div class="problem-card">
                     <div class="icon">🏭</div>
                     <h3>Contaminación Industrial Por Planta de Concreto</h3>
-                    <p>Existen estudios científicos sobre los efectos de plantas de concreto: Las emisiones de las máquinas, sumada a la mezcla de polvos de cemento, sílice, agregados y del quebrador- triturador de piedra, pueden causar serios problemas de salud incluyendo problemas en los ojos y la piel, asma y cáncer, contaminar el agua y destruir la vida acuática.</p>
+                    <p>Existen estudios científicos sobre los efectos de plantas de concreto: Las emisiones de las
+                        máquinas, sumada a la mezcla de polvos de cemento, sílice, agregados y del quebrador- triturador
+                        de piedra, pueden causar serios problemas de salud incluyendo problemas en los ojos y la piel,
+                        asma y cáncer, contaminar el agua y destruir la vida acuática.</p>
                 </div>
                 <div class="problem-card">
                     <div class="icon">🌳</div>
                     <h3>Deforestación</h3>
-                    <p>La minería en ríos ha causado ensanchamiento y profundización del lecho y puede reducir la  capacidad de recarga de acuíferos y de filtración de impurezas, como patógenos o químicos,  en este caso directamente afectando a más de 4000 personas río abajo.</p>
+                    <p>La minería en ríos ha causado ensanchamiento y profundización del lecho y puede reducir la
+                        capacidad de recarga de acuíferos y de filtración de impurezas, como patógenos o químicos, en
+                        este caso directamente afectando a más de 4000 personas río abajo.</p>
                 </div>
                 <div class="problem-card">
                     <div class="icon">🏗️</div>
                     <h3>Concesiones</h3>
-                    <p>Efectos acumulativos de 11 proyectos los estudios de impacto ambiental no consideran los efectos acumulativos y sinergéticos que podrían tener 11 concesiones que abarcarían más de la mitad del río Guacimal, más la fábrica de concreto y el quebrador en una finca colindante con el río.</p>
+                    <p>Efectos acumulativos de 11 proyectos los estudios de impacto ambiental no consideran los efectos
+                        acumulativos y sinergéticos que podrían tener 11 concesiones que abarcarían más de la mitad del
+                        río Guacimal, más la fábrica de concreto y el quebrador en una finca colindante con el río.</p>
                 </div>
                 <!--
                 <div class="problem-card">
@@ -118,7 +195,7 @@
                     <h3>Maquinaria Pesada</h3>
                     <p>La extracion de material del rio trae como consequencia el uso de carreteras cantonales poco mantenidas con potenciales accidenetes para los residentes.</p>
                 </div>-->
-                
+
             </div>
         </div>
     </section>
@@ -128,7 +205,7 @@
         <div class="container">
             <h2 class="section-title">Nuestras Acciones</h2>
             <div class="actions-container">
-                
+
                 <!-- Acción 1: Reforestación -->
                 <!-- CAMBIAR IMAGEN: Reemplazar media/reforestacion.jpg -->
                 <div class="action-item">
@@ -136,7 +213,11 @@
                     <div class="action-content">
                         <h3>Educación Ambiental</h3>
                         <p>Programas educativos en escuelas para crear conciencia sobre las bondades del río.</p>
-                        <p>Por ejemplo, en la feria realizada por el CTT, la Alianza de Comunidades por la Defensa del Agua y el Centro de Sostenibilidad de Costa Rica enseñaron la labor de filtración que la arena y piedra realiza para mantener el agua de los acuíferos sana y limpia y abundante.  Más de 4,000 personas río abajo dependen de que este sistema de filtración se mantenga intacto. <p>
+                        <p>Por ejemplo, en la feria realizada por el CTT, la Alianza de Comunidades por la Defensa del
+                            Agua y el Centro de Sostenibilidad de Costa Rica enseñaron la labor de filtración que la
+                            arena y piedra realiza para mantener el agua de los acuíferos sana y limpia y abundante. Más
+                            de 4,000 personas río abajo dependen de que este sistema de filtración se mantenga intacto.
+                        <p>
                     </div>
                 </div>
                 <!-- CAMBIAR IMAGEN: Reemplazar media/reforestacion.jpg -->
@@ -144,21 +225,46 @@
                     <img src="media/clases.png" alt="Educacion Ambiental">
                     <div class="action-content">
                         <!--<h3></h3>-->
-                        <p>El Corredor Biológico Pájaro Campana en conjunto con el Sendero Pacífico vienen organizando caminatas donde se identifican especies de aves, vegetación y otra vida silvestre a desde las montañas de Monteverde hasta la costa del Golfo de Nicoya.  Kioscos Socioambientales de la Universidad de Costa Rica en conjunto con la Asociación Ornitológica de Costa Rica apoyó esta iniciativa a través de  jornadas de avistamiento de aves para jóvenes y habitantes de las comunidades aledañas al río Guacimal.</p>
-                        <p>Es una manera de educar sobre las bondades del río y todo lo que sustenta, y además sirve para entusiasmar a las nuevas generaciones a involucrarse en actividades saludable y que en un futuro puedan generar un ingreso sustancial como guías naturalistas en esta zona donde ya se practica el turismo rural comunitario</p>
-                        <a href="https://www.ucr.ac.cr/noticias/2025/11/20/un-grupo-de-estudiantes-de-tcu-promueven-el-avistamiento-de-aves-como-actividad-turistica-en-guacimal.html" target="_blank">Enlace</a>
+                        <p>El Corredor Biológico Pájaro Campana en conjunto con el Sendero Pacífico vienen organizando
+                            caminatas donde se identifican especies de aves, vegetación y otra vida silvestre a desde
+                            las montañas de Monteverde hasta la costa del Golfo de Nicoya. Kioscos Socioambientales de
+                            la Universidad de Costa Rica en conjunto con la Asociación Ornitológica de Costa Rica apoyó
+                            esta iniciativa a través de jornadas de avistamiento de aves para jóvenes y habitantes de
+                            las comunidades aledañas al río Guacimal.</p>
+                        <p>Es una manera de educar sobre las bondades del río y todo lo que sustenta, y además sirve
+                            para entusiasmar a las nuevas generaciones a involucrarse en actividades saludable y que en
+                            un futuro puedan generar un ingreso sustancial como guías naturalistas en esta zona donde ya
+                            se practica el turismo rural comunitario</p>
+                        <a href="https://www.ucr.ac.cr/noticias/2025/11/20/un-grupo-de-estudiantes-de-tcu-promueven-el-avistamiento-de-aves-como-actividad-turistica-en-guacimal.html"
+                            target="_blank">Enlace</a>
                         <br><br>
-                        <p>¿Qué dicen los guías locales sobre los quebradores que se planean para el río Guacimal?Jorge Gonzáles es guacimaleño, estudiante de Maestría en Desarrollo Sostenible y guía de turismo. Video elaborado por TC-590 Defensa comunitaria de territorios.</p>
-                        <a href="https://www.instagram.com/reel/DQuwQEnkSTc/?igsh=Mm1wbjc1NjFoeG9x" target="_blank">Enlace</a>
+                        <p>¿Qué dicen los guías locales sobre los quebradores que se planean para el río Guacimal?Jorge
+                            Gonzáles es guacimaleño, estudiante de Maestría en Desarrollo Sostenible y guía de turismo.
+                            Video elaborado por TC-590 Defensa comunitaria de territorios.</p>
+                        <a href="https://www.instagram.com/reel/DQuwQEnkSTc/?igsh=Mm1wbjc1NjFoeG9x"
+                            target="_blank">Enlace</a>
                         <br><br>
-                        <p>Durante dos días, jóvenes del Liceo Rural de Guacimal se unieron a descubrir avifauna alrededor del Río. Estuvieron acompañados por la Asociación Ornitológica de Costa Rica, el Corredor Biológico Pájaro Campana y guías locales para identificar y registrar distintas especies de aves.   En total se lograron identificar 92 especies de aves en los sectores del río Acapulco, Coyolar, Los Ángeles y Guacimal.  La cuenca del Río Guacimal se está viendo amenazada por un enjambre de proyectos de minería no metálica, donde llegan a contabilizarse por ahora, hasta 12 concesiones en Cauce de Dominio Público del Río Guacimal.  Más información en el siguiente enlace:</p>
-                        <a href="https://www.instagram.com/p/DQZuDBvEfTv/?igsh=eHh4NjFlc3I0bWN" target="_blank">Enlace</a>
-                        <img src="media/caminaxrio.png"  alt="Educacion Ambiental">
+                        <p>Durante dos días, jóvenes del Liceo Rural de Guacimal se unieron a descubrir avifauna
+                            alrededor del Río. Estuvieron acompañados por la Asociación Ornitológica de Costa Rica, el
+                            Corredor Biológico Pájaro Campana y guías locales para identificar y registrar distintas
+                            especies de aves. En total se lograron identificar 92 especies de aves en los sectores del
+                            río Acapulco, Coyolar, Los Ángeles y Guacimal. La cuenca del Río Guacimal se está viendo
+                            amenazada por un enjambre de proyectos de minería no metálica, donde llegan a contabilizarse
+                            por ahora, hasta 12 concesiones en Cauce de Dominio Público del Río Guacimal. Más
+                            información en el siguiente enlace:</p>
+                        <a href="https://www.instagram.com/p/DQZuDBvEfTv/?igsh=eHh4NjFlc3I0bWN"
+                            target="_blank">Enlace</a>
+                        <img src="media/caminaxrio.png" alt="Educacion Ambiental">
                         <br><br>
-                        <p>Valentina Hernández, es parte de 10 jóvenes del Liceo de Guacimal y la organización Guazuma, que se sumaron a las 5:00am del sábado 25 de octubre, a una jornada para identificar aves. Recorrieron 4 rutas entre los sectores de río Acapulco, Coyolar, Los Ángeles y Guacimal. ¡Gracias por sus aportes, compromiso y curiosidad por la naturaleza! TCU-590 Defensa comunitaria de territorios, inscrito en Escuela de Sociología, UCR.</p>
-                        <a href="https://www.instagram.com/reel/DQerK2FkS79/?igsh=dGwyMWpwbWc5eGwx" target="_blank">Enlace</a>
+                        <p>Valentina Hernández, es parte de 10 jóvenes del Liceo de Guacimal y la organización Guazuma,
+                            que se sumaron a las 5:00am del sábado 25 de octubre, a una jornada para identificar aves.
+                            Recorrieron 4 rutas entre los sectores de río Acapulco, Coyolar, Los Ángeles y Guacimal.
+                            ¡Gracias por sus aportes, compromiso y curiosidad por la naturaleza! TCU-590 Defensa
+                            comunitaria de territorios, inscrito en Escuela de Sociología, UCR.</p>
+                        <a href="https://www.instagram.com/reel/DQerK2FkS79/?igsh=dGwyMWpwbWc5eGwx"
+                            target="_blank">Enlace</a>
                         <br><br>
-                        </div>
+                    </div>
                 </div>
 
                 <!-- Acción 2: Limpieza -->
@@ -167,10 +273,23 @@
                     <img src="media/jovenesarmonia.png" alt="Jornada de limpieza">
                     <div class="action-content">
                         <h3>Monitoreo de Calidad de agua</h3>
-                        <p>El Centro Científico Tropical viene a trabajar con los jóvenes de comunidades aledañas al río Guacimal y  para determinar la calidad del agua utilizando análisis de macroinvertebrados .</p>
-                        <p>Comenzando en el 2023 como parte de un proyecto de ciencia ciudadana alrededor de la protección de los ríos, el departamento de Educación Ambiental del  Centro Científico Tropical (Reserva Monteverde), los y las jóvenes recibieron una capacitación con exposiciones de personas en temas de monitoreo de aguas para que conozcan lo que se hace desde las diferentes organizaciones.  Se tocaron temas de cambio climático con organizaciones locales e internacionales.  </p>
-                        <p>Después hubo capacitaciones más específicas con una experta del Instituto Monteverde, Luisa Moreno, quien les enseñó cómo medir las características físico-químicas del agua, y cómo utilizar los macroinvertebrados como bioindicadores de salud del rio.  Una vez ya capacitados, los monitoreos comenzaron para convertirse en centinelas y protectores del río en caso de que haya algún cambio en la calidad de agua, que en este momento es buena.</p>
-                        <p>En el 2024 y el 2025, este programa  del CTT ha seguido con los monitoreos  tanto en la época seca como la lluviosa en alianza con el programa de Adopte una Quebrada del  Instituto Monteverde</p>
+                        <p>El Centro Científico Tropical viene a trabajar con los jóvenes de comunidades aledañas al río
+                            Guacimal y para determinar la calidad del agua utilizando análisis de macroinvertebrados .
+                        </p>
+                        <p>Comenzando en el 2023 como parte de un proyecto de ciencia ciudadana alrededor de la
+                            protección de los ríos, el departamento de Educación Ambiental del Centro Científico
+                            Tropical (Reserva Monteverde), los y las jóvenes recibieron una capacitación con
+                            exposiciones de personas en temas de monitoreo de aguas para que conozcan lo que se hace
+                            desde las diferentes organizaciones. Se tocaron temas de cambio climático con organizaciones
+                            locales e internacionales. </p>
+                        <p>Después hubo capacitaciones más específicas con una experta del Instituto Monteverde, Luisa
+                            Moreno, quien les enseñó cómo medir las características físico-químicas del agua, y cómo
+                            utilizar los macroinvertebrados como bioindicadores de salud del rio. Una vez ya
+                            capacitados, los monitoreos comenzaron para convertirse en centinelas y protectores del río
+                            en caso de que haya algún cambio en la calidad de agua, que en este momento es buena.</p>
+                        <p>En el 2024 y el 2025, este programa del CTT ha seguido con los monitoreos tanto en la época
+                            seca como la lluviosa en alianza con el programa de Adopte una Quebrada del Instituto
+                            Monteverde</p>
                         <p></p>
                     </div>
                 </div>
@@ -179,51 +298,75 @@
                 <!-- CAMBIAR IMAGEN: Reemplazar media/educacion.jpg -->
                 <div class="action-item">
                     <div class="gallery-exhibitor">
-                        <img src="media/AguaPura.jpeg"  alt="Revista Agua Pura" class="revista-img">
-                        <img src="media/imgrioguacimalUno.jpeg"  alt="Revista Agua Pura Uno" class="revista-img">
-                        <img src="media/imgrioguacimalDos.jpeg"  alt="Revista Agua Pura Dos" class="revista-img">
+                        <img src="media/AguaPura.jpeg" alt="Revista Agua Pura" class="revista-img">
+                        <img src="media/imgrioguacimalUno.jpeg" alt="Revista Agua Pura Uno" class="revista-img">
+                        <img src="media/imgrioguacimalDos.jpeg" alt="Revista Agua Pura Dos" class="revista-img">
                     </div>
                     <div class="action-content">
                         <h3>DEFENSA LEGAL</h3>
-                        <p>Trabajamos con un equipo legal con experiencia en el campo ambiental a nivel nacional y este equipo se vincula con el equipo legal y de científicos de la organización sin fines de lucro, ELaw  (Environmental Law Alliance Worldwide). </p>
-                        <p>Nuestro equipo legal nacional ha proporcionado muchos servicios pro bono, pero por la inmensa cantidad de trabajo, estamos adoptando la modalidad de costo reducido (sliding-fee scale). Es crucial generar fondos ya que nos enfrentamos a 11 diferentes compañías, cada una con un expediente separado para solicitar el permiso de extracción de la piedra y la arena, dos de las cuales ya están en operación.  Todos juntos sumarían más de la mitad de todo el río Guacimal.  Un agravante es la existencia de una solicitud para un quebrador y una planta de concreto en una finca colindante al río.</p>  
-                        <p> ELaw proporciona apoyo legal y científico gratuito a nuestro grupo legal nacional y están preparados para apoyarnos por los años o meses que sean necesarios.</p>
-                        <p>Nuestro equipo legal ha presentado objeciones formales a los estudios de impacto Hasta el momento se han interpuesto dos recursos legales.  También se han gestionado dos audiencias con el gobierno regional, una en el Concejo Municipal de Puntarenas y otra en la Alcaldía Municipal de Puntarenas para expresar nuestras preocupaciones y solicitar un alto (moratoria) hasta que se estudie el alcance verdadero del impacto que tendrían sobre el río.</p>
+                        <p>Trabajamos con un equipo legal con experiencia en el campo ambiental a nivel nacional y este
+                            equipo se vincula con el equipo legal y de científicos de la organización sin fines de
+                            lucro, ELaw (Environmental Law Alliance Worldwide). </p>
+                        <p>Nuestro equipo legal nacional ha proporcionado muchos servicios pro bono, pero por la inmensa
+                            cantidad de trabajo, estamos adoptando la modalidad de costo reducido (sliding-fee scale).
+                            Es crucial generar fondos ya que nos enfrentamos a 11 diferentes compañías, cada una con un
+                            expediente separado para solicitar el permiso de extracción de la piedra y la arena, dos de
+                            las cuales ya están en operación. Todos juntos sumarían más de la mitad de todo el río
+                            Guacimal. Un agravante es la existencia de una solicitud para un quebrador y una planta de
+                            concreto en una finca colindante al río.</p>
+                        <p> ELaw proporciona apoyo legal y científico gratuito a nuestro grupo legal nacional y están
+                            preparados para apoyarnos por los años o meses que sean necesarios.</p>
+                        <p>Nuestro equipo legal ha presentado objeciones formales a los estudios de impacto Hasta el
+                            momento se han interpuesto dos recursos legales. También se han gestionado dos audiencias
+                            con el gobierno regional, una en el Concejo Municipal de Puntarenas y otra en la Alcaldía
+                            Municipal de Puntarenas para expresar nuestras preocupaciones y solicitar un alto
+                            (moratoria) hasta que se estudie el alcance verdadero del impacto que tendrían sobre el río.
+                        </p>
                         <div class="action-content">
-                        <section class="seccion-descargas">
-                            <h2>Comunidades solicitan moratoria municipal a extracción de materiales en cuenca del Río Guacimal.</h2>
-                            <div class="lista-botones">
-                                <a href="https://www.instagram.com/p/DR2e1cWkW0a/?igsh=ZjRubDJuZ3RtcGxh" target="_blank" class="btn-link">Solicitud de moratoria</a>
-                                <a href="https://delfino.cr/2025/11/comunidades-solicitan-moratoria-municipal-para-frenar-extracciones-en-el-rio-guacimal-en-puntarenas" target="_blank" class="btn-link">Riesgos ambientales</a>
-                                <a href="https://www.instagram.com/p/DRkr2NFE2a7/?igsh=ZmJrMXY5ZXVyOTB0" target="_blank" class="btn-link">Comunidades del Corredor Biológico Pájaro Campana</a>
-                                <a href="https://zonaaltamedios.com/post/146-la-comunidad-de-guacimal-y-organizaciones-del-corredor-pajaro-campana-se-levantan-para-defender-el-rio-y-exigen-una-moratoria-municipal" target="_blank" class="btn-link">Zona Alta Monteverde</a>
-                                <a href="https://semanariouniversidad.com/pais/comunidades-puntarenenses-piden-a-municipalidad-moratoria-municipal-para-frenar-extracciones-en-el-rio-guacimal/" target="_blank" class="btn-link">Semanario Universidad</a>
-                                <a href="https://www.facebook.com/share/v/1HteFBwezx/?mibextid=wwXIfr" target="_blank" class="btn-link">Municipalidad de Puntarenas, Sesión Extraordinaria No 131 </a>
+                            <section class="seccion-descargas">
+                                <h2>Comunidades solicitan moratoria municipal a extracción de materiales en cuenca del
+                                    Río Guacimal.</h2>
+                                <div class="lista-botones">
+                                    <a href="https://www.instagram.com/p/DR2e1cWkW0a/?igsh=ZjRubDJuZ3RtcGxh"
+                                        target="_blank" class="btn-link">Solicitud de moratoria</a>
+                                    <a href="https://delfino.cr/2025/11/comunidades-solicitan-moratoria-municipal-para-frenar-extracciones-en-el-rio-guacimal-en-puntarenas"
+                                        target="_blank" class="btn-link">Riesgos ambientales</a>
+                                    <a href="https://www.instagram.com/p/DRkr2NFE2a7/?igsh=ZmJrMXY5ZXVyOTB0"
+                                        target="_blank" class="btn-link">Comunidades del Corredor Biológico Pájaro
+                                        Campana</a>
+                                    <a href="https://zonaaltamedios.com/post/146-la-comunidad-de-guacimal-y-organizaciones-del-corredor-pajaro-campana-se-levantan-para-defender-el-rio-y-exigen-una-moratoria-municipal"
+                                        target="_blank" class="btn-link">Zona Alta Monteverde</a>
+                                    <a href="https://semanariouniversidad.com/pais/comunidades-puntarenenses-piden-a-municipalidad-moratoria-municipal-para-frenar-extracciones-en-el-rio-guacimal/"
+                                        target="_blank" class="btn-link">Semanario Universidad</a>
+                                    <a href="https://www.facebook.com/share/v/1HteFBwezx/?mibextid=wwXIfr"
+                                        target="_blank" class="btn-link">Municipalidad de Puntarenas, Sesión
+                                        Extraordinaria No 131 </a>
+                                </div>
+                            </section>
+
+                            <p></p>
+                        </div>
+                        <!-- ↓↓↓ ESTO VA AL FINAL DEL BODY, HIJO DIRECTO DE <body> ↓↓↓ -->
+                        <div id="imageModal" class="modal" role="dialog" aria-modal="true">
+
+                            <div class="modal-toolbar">
+                                <button type="button" class="tool-btn" id="zoomOut" title="Alejar">−</button>
+                                <span class="zoom-level" id="zoomLevel">100%</span>
+                                <button type="button" class="tool-btn" id="zoomIn" title="Acercar">+</button>
+                                <button type="button" class="tool-btn" id="fitBtn" title="Ajustar a pantalla">⤢</button>
+                                <button type="button" class="tool-btn close-btn" id="closeBtn"
+                                    title="Cerrar">&times;</button>
                             </div>
-                        </section>
 
-                        <p></p>
+                            <div class="modal-scroll" id="modalScroll">
+                                <img class="modal-content" id="modalImg" alt="Vista ampliada">
+                            </div>
+                        </div>
                     </div>
-                  <!-- ↓↓↓ ESTO VA AL FINAL DEL BODY, HIJO DIRECTO DE <body> ↓↓↓ -->
-                <div id="imageModal" class="modal" role="dialog" aria-modal="true">
 
-                    <div class="modal-toolbar">
-                    <button type="button" class="tool-btn" id="zoomOut" title="Alejar">−</button>
-                    <span class="zoom-level" id="zoomLevel">100%</span>
-                    <button type="button" class="tool-btn" id="zoomIn" title="Acercar">+</button>
-                    <button type="button" class="tool-btn" id="fitBtn" title="Ajustar a pantalla">⤢</button>
-                    <button type="button" class="tool-btn close-btn" id="closeBtn" title="Cerrar">&times;</button>
-               </div>
-
-             <div class="modal-scroll" id="modalScroll">
-                <img class="modal-content" id="modalImg" alt="Vista ampliada">
-            </div>
-           </div>
-                </div>
-
-                <!-- Acción 4: Monitoreo -->
-                <!-- CAMBIAR IMAGEN: Reemplazar media/monitoreo.jpg -->
-                <!--<div class="action-item reverse">
+                    <!-- Acción 4: Monitoreo -->
+                    <!-- CAMBIAR IMAGEN: Reemplazar media/monitoreo.jpg -->
+                    <!--<div class="action-item reverse">
                     <img src="media/monitoreo.jpg" alt="Monitoreo de calidad del agua">
                     <div class="action-content">
                         <h3>Monitoreo de Calidad</h3>
@@ -231,8 +374,8 @@
                     </div>
                 </div>-->
 
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Participa Section -->
@@ -242,16 +385,23 @@
             <div class="participate-grid">
                 <div class="participate-card">
                     <h3>Voluntario</h3>
-                    <p>Únete a nuestras jornadas de campo y actividades comunitarias. Si vives lejos, aún asi puedes hecer mucho. Escríbenos al correo para aprender cómo:</p>
+                    <p>Únete a nuestras jornadas de campo y actividades comunitarias. Si vives lejos, aún asi puedes
+                        hecer mucho. Escríbenos al correo para aprender cómo:</p>
                     <a href="#contacto" class="btn-secondary">alianzahidrica.pts@gmail.com</a>
                 </div>
                 <div class="participate-card">
                     <h3>Donaciones</h3>
-                    <p>Apoya el fondo legal, de educación y de difusión-comunicación.  Si deseas donar para eximirlo de impuestos en los Estados Unidos Americanos, ve a la página de nuestro agente fiscal en ese país.  Se llama Global Community Initiatives (www.global-community.org). </p>
-                    <p>Si deseas donar dentro de Costa Rica, puedes hacerlo a las cuentas de colones o dólares de la Asociación Comunidades, que es nuestro agente fiscal nacional.  Envíanos un correo para inscribirte para recibir nuestro boletín:  alianzahidrica.pts@gmail.com </p></p>
+                    <p>Apoya el fondo legal, de educación y de difusión-comunicación. Si deseas donar para eximirlo de
+                        impuestos en los Estados Unidos Americanos, ve a la página de nuestro agente fiscal en ese país.
+                        Se llama Global Community Initiatives (www.global-community.org). </p>
+                    <p>Si deseas donar dentro de Costa Rica, puedes hacerlo a las cuentas de colones o dólares de la
+                        Asociación Comunidades, que es nuestro agente fiscal nacional. Envíanos un correo para
+                        inscribirte para recibir nuestro boletín: alianzahidrica.pts@gmail.com </p>
+                    </p>
                     <p></p>
                     <p></p>
-                    <a href="https://www.zeffy.com/en-US/donation-form/comunidades-guacimal-costa-rica" class="btn-secondary">Donar</a>
+                    <a href="https://www.zeffy.com/en-US/donation-form/comunidades-guacimal-costa-rica"
+                        class="btn-secondary">Donar</a>
                 </div>
                 <div class="participate-card">
                     <h3>Difunde</h3>
@@ -262,7 +412,7 @@
         </div>
     </section>
 
-     <!-- Noticias Section -->
+    <!-- Noticias Section -->
     <section id="noticias" class="section section-blue">
         <div class="container">
             <h2 class="section-title white">Solicitud de Anulación</h2>
@@ -270,25 +420,27 @@
                 <div class="participate-card">
                     <h3>Noticias</h3>
                     <p>Solicitan anular viabilidad ambiental de proyecto minero en el río Guacimal.</p>
-                    <a href="https://surcosdigital.com/solicitan-anular-viabilidad-ambiental-de-proyecto-minero-en-el-rio-guacimal/" class="btn-secondary"target="_blank">Ver Noticia</a>
+                    <a href="https://surcosdigital.com/solicitan-anular-viabilidad-ambiental-de-proyecto-minero-en-el-rio-guacimal/"
+                        class="btn-secondary" target="_blank">Ver Noticia</a>
                 </div>
             </div>
             <div>
-              <h2 class="section-title white"></h2>
-              <div class="participate-grid">
-                <div class="participate-card">
-                    <h3>Podcast</h3>
-                    <p>Cafe en el Corredor La defensa del rio guacimal en youtube</p>
-                    <a href="https://youtu.be/azH66sGVtnQ" class="btn-secondary"target="_blank">Escuchar Podcast</a>
+                <h2 class="section-title white"></h2>
+                <div class="participate-grid">
+                    <div class="participate-card">
+                        <h3>Podcast</h3>
+                        <p>Cafe en el Corredor La defensa del rio guacimal en youtube</p>
+                        <a href="https://youtu.be/azH66sGVtnQ" class="btn-secondary" target="_blank">Escuchar
+                            Podcast</a>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
-  
-         
-        
-   
+
+
+
+
 
     <!-- Contacto Section -->
     <section id="contacto" class="section">
@@ -338,6 +490,9 @@
 
     <!-- ⚠️ IMPORTANTE: Esta línea debe estar aquí -->
     <script src="script.js"></script>
-
+    <!--bootstrap scripts-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous">
+    </script>
 </body>
-</html>
+</html >

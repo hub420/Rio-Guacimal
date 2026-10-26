@@ -710,3 +710,26 @@ body.modal-open{ overflow:hidden; }
     .modal-scroll{ padding:56px 0 20px; }
     #imageModal .modal-content{ width:100%; }
 }
+
+/*movimiento al carusel de imagenes*/
+/* Transición suave del carousel */
+.carousel-item {
+  transition: transform 1.2s ease-in-out !important;
+}
+
+/* Indicadores personalizados */
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/*ajustes de imagenes del carrusel*/
+/* Limita la altura del carousel para evitar espacios gigantes */
+.img-carousel {
+  max-height: 500px;     /* Ajusta este valor si lo quieres más alto o bajo */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;   /* Mantiene la proporción de la imagen sin recortarla */
+}
+
